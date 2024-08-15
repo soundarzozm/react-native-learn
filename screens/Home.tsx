@@ -1,13 +1,17 @@
 import React from 'react';
-import {StyleSheet, View, Text, ScrollView} from 'react-native';
+import {StyleSheet, View, Text, ScrollView, SafeAreaView} from 'react-native';
+import mockData from '../data/mock/home.json';
+import Tweet from '../components/Tweet';
 
 const HomeScreen = () => {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.text} onPress={() => console.log('Hello World!')}>
-        Welcome to your feed
-      </Text>
-    </ScrollView>
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
+        {mockData.map(tweetData => {
+          return <Tweet tweetData={tweetData} key={tweetData.id} />;
+        })}
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
@@ -20,6 +24,9 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 60,
+  },
+  header: {
+    height: 150,
   },
 });
 

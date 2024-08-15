@@ -1,0 +1,6 @@
+export enum TABS {
+  HOME,
+  SEARCH,
+  NOTIFICATIONS,
+  PROFILE,
+}

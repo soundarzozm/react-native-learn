@@ -1,32 +1,51 @@
 import React from 'react';
-import {StyleSheet, View, Text, ScrollView, SafeAreaView} from 'react-native';
+import {StyleSheet, View, ScrollView, TouchableOpacity} from 'react-native';
 import mockData from '../data/mock/home.json';
 import Tweet from '../components/Tweet';
+import TwitterIcon from '../assets/icons/twitter.svg';
+import ProfileIcon from '../assets/icons/user.svg';
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.container}>
+    <View>
+      <View style={styles.headerContainer}>
+        <TouchableOpacity style={styles.profileIcon}>
+          <ProfileIcon />
+        </TouchableOpacity>
+        <TwitterIcon style={styles.twitterIcon} />
+      </View>
+      <ScrollView>
         {mockData.map(tweetData => {
           return <Tweet tweetData={tweetData} key={tweetData.id} />;
         })}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   text: {
     fontSize: 60,
   },
+  headerContainer: {
+    height: 100,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
   header: {
-    height: 150,
+    display: 'flex',
+    flexDirection: 'row',
+    backgroundColor: 'red',
+  },
+  twitterIcon: {
+    margin: 10,
+  },
+  profileIcon: {
+    position: 'absolute',
+    left: 12,
+    bottom: 10,
   },
 });
 

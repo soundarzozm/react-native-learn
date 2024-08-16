@@ -1,10 +1,15 @@
 import React from 'react';
-import {StyleSheet, View, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import SvgLoader from './SvgLoader';
+import {BlurView} from '@react-native-community/blur';
 
 const Tabs = ({tabs, activeTab, setActiveTab}) => {
   return (
-    <View style={styles.tabBar}>
+    <BlurView
+      style={styles.tabBar}
+      blurRadius={1}
+      blurAmount={7}
+      blurType="light">
       {tabs.map((tab, index) => (
         <TouchableOpacity
           key={index}
@@ -13,7 +18,7 @@ const Tabs = ({tabs, activeTab, setActiveTab}) => {
           <SvgLoader icon={tab.icon} active={activeTab === index} />
         </TouchableOpacity>
       ))}
-    </View>
+    </BlurView>
   );
 };
 

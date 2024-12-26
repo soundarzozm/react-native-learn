@@ -1,0 +1,15 @@
+current directory: /Users/sm185711/Projects/Others/react-native-learn/ReactNativeLearn/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+/Users/sm185711/.rbenv/versions/3.1.2/bin/ruby -I /Users/sm185711/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20241226-91571-2i88rc.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sm185711/Projects/Others/react-native-learn/ReactNativeLearn/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= clean
+
+current directory: /Users/sm185711/Projects/Others/react-native-learn/ReactNativeLearn/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\=
+compiling nkf.c
+linking shared-object nkf.bundle
+
+current directory: /Users/sm185711/Projects/Others/react-native-learn/ReactNativeLearn/vendor/bundle/ruby/3.1.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= install
+/opt/homebrew/bin/ginstall -c -m 0755 nkf.bundle ./.gem.20241226-91571-rqoa6m
